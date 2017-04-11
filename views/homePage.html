@@ -1,0 +1,14 @@
+﻿
+<div ng-class="divHome" id="notebooks" ng-init="init()">
+    <input type="text" id="query" ng-model="query" />
+    <ul id="notebook_ul">
+        <li ng-repeat="restaurant in restaurantLists | filter:query | orderBy: orderList">
+            {{restaurant.restaurantname}}<br />
+            <div class="right top">{{restaurant.restaurantaddress}}</div>
+            <div class="right" star-rating rating-value="restaurant.restaurantrating" max="5" on-rating-selected="getSelectedRating(rating)"></div>            
+            <img ng-src="{{restaurant.restuarnthumburl}}" />
+        </li>
+        
+    </ul>
+    <span>Available Restaurants: {{restaurantLists.length}}</span>
+</div>

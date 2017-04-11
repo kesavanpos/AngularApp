@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+
+        #divContent{
+                margin-left: 500px;
+                margin-top: 250px;
+        }
+
+        body{
+           background-color: lightyellow;
+           background-image:url("../images/restaurant.jpg");
+           background-repeat : no-repeat;
+           background-size:cover;
+            left:50%;
+            top:50%;
+        }
+
+        #divHome{
+            
+            background-color: #cccccc;
+        }
+        #notebooks {
+  background: whitesmoke;
+  position: relative;
+  /*left: 50%;*/
+  /*margin-left: -0px;*/
+  /*margin-top: 35px;*/
+  width: 800px;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 0 white;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  max-height: 390px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 5px 0 5px;
+  border-left: none;
+  border-right: none;
+}
+
+li {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: 
+    linear-gradient(
+      90deg,
+      #FFD32E 10px,
+      #EEE 10px,
+      #EEE 11px,
+      transparent 11px);
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #CCC;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#query {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 19px;
+  padding: 5px;
+  font-family: calibri light;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#notebooks span {
+  display: block;
+  position: absolute;
+  background: #FFD32E;
+  bottom: -35px;
+  left: -1px;
+  width: 800px;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+#notebooks select {
+  width: 800px;
+  margin-left: 230px;
+  margin-top: -45px;
+  border-radius: 0 3px 3px 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  padding: 7.5px;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#notebooks select:focus, #query:focus {
+  border: 1px solid #FFD32E;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
+  outline: none;
+}
+
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+    width : auto;
+    float: right;
+    margin-top: -30px;
+}
+ul.rating {
+    display: inline-block;
+}
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size:20px;
+}
+.rating .filled {
+    color: orangered;
+}
+.clear{
+  margin-top:20px;
+}
+
+.stars{
+    width:auto;
+}
+
+.rating li
+{
+    width : auto;
+    background-image:none;
+}
+
+    </style>
+
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <script src="lib/jquery-1.11.1.js"></script>
+    <script src="lib/bootstrap.js"></script>
+</head>
+
+<body ng-app="FoodApp">
+    <div id="divContent" ui-view></div>
+    <div footer></div>
+</body>
+</html>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.js"></script>
+<script src="lib/angular-translate.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/homeController.js"></script>
+<script src="services/foodService.js"></script>
+<script src="directives/starRating.js"></script>
+<script src="directives/footer.js"></script>
